@@ -228,6 +228,14 @@
         margin-top: -130px;
     }
 
+  .projects_armazenamento ul {
+    display: grid;
+    margin-top: 50px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
     .section3-texto {
         width: 100%;
         text-align: center;
