@@ -150,8 +150,8 @@
     .conteudo-metas {
         font-family: 'poppins';
         text-align: center;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 0px 10px;
         margin-top: -20px;
     }
