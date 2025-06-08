@@ -676,7 +676,7 @@ section h1 {
 .footer-contatos {
     width: 35%;
     height: 600px;
-    background-image: url(.../Media/wallpaper\ azul\ escuro.png);
+    background-image: url(../Media/wallpaper\ azul\ escuro.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
