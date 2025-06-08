@@ -10,7 +10,7 @@
       position: fixed;
       top: 0;
       right: -50%; /* Inicialmente fora da tela à direita */
-      width: 40%; /* Ocupa metade da tela */
+      width: 50%; /* Ocupa metade da tela */
       height:530px;
       background-color: rgb(58, 101, 245);
       border-radius: 0px 0px 0px 30px ;
