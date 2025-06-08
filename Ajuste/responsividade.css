@@ -102,9 +102,9 @@
 
     .img-2 {
         margin-top: 30px;
-        width: 350px;
+        width: 320px;
         height: 270px;
-        background-image: url(/Media/foto-3.jpg);
+        background-image: url(../Media/foto-3.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -182,7 +182,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image: url(/Media/wallpaper\ footer.png);
+        background-image: url(../Media/wallpaper\ footer.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -233,7 +233,7 @@
         text-align: center;
         padding: 10px 22px;
         font-family: 'poppins';
-        background-image: url(/Media/wallpaper\ azul\ escuro.png);
+        background-image: url(../Media/wallpaper\ azul\ escuro.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -271,8 +271,8 @@
         justify-content: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
-        padding: 30px 25px;
+        gap: 20px;
+        padding: 20px 15px;
         text-align: center;
     }
 
@@ -285,7 +285,7 @@
     .depoimentos{
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 15px;
         margin-top: -90px;
         justify-content: center;
         align-items: center;
@@ -317,7 +317,7 @@
 
     .section-4 {
         height: 400px;
-        background-image: url(/Media/wallpaper\ azul\ escuro.png);
+        background-image: url(../Media/wallpaper\ azul\ escuro.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
