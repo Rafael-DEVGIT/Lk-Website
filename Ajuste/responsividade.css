@@ -4,6 +4,21 @@
         width: 120px;
         margin-top: 7px;
     } 
+
+
+    .overlay-menu {
+      position: fixed;
+      top: 0;
+      right: -50%; /* Inicialmente fora da tela à direita */
+      width: 40%; /* Ocupa metade da tela */
+      height:530px;
+      background-color: rgb(58, 101, 245);
+      border-radius: 0px 0px 0px 30px ;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s ease-in-out;
+      z-index: 9999; /* Garante que o menu fique sobre o conteúdo */
+   }
     
     .btns-nav {
         transition: all 0.5s;
