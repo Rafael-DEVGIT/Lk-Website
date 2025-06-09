@@ -9,7 +9,7 @@
     .overlay-menu {
       position: fixed;
       top: 0;
-      right: -50%; /* Inicialmente fora da tela à direita */
+      right: -53%; /* Inicialmente fora da tela à direita */
       width: 53%; /* Ocupa metade da tela */
       height:530px;
       background-color: rgb(58, 101, 245);
