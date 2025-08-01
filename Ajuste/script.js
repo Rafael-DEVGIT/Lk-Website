@@ -146,3 +146,98 @@ buttonGeral.forEach((item)=>{
       });
     });
   });
+
+
+  function mostrarDiv(event, num) {
+      event.preventDefault();
+
+      // Esconde todas as divs
+      document.querySelectorAll('.conteudo').forEach(div => {
+        div.classList.remove('ativo');
+      });
+
+      // Mostra a div selecionada
+      document.getElementById('div' + num).classList.add('ativo');
+
+      // Remove classe ativa dos links
+      document.querySelectorAll('.links a').forEach(link => {
+        link.classList.remove('ativo-link');
+      });
+
+      // Adiciona a classe ao link clicado
+      event.target.classList.add('ativo-link');
+    }
+
+
+      function mostrarConteudo(id) {
+    const divs = document.querySelectorAll('.conteudo');
+    divs.forEach(div => div.classList.remove('ativo'));
+    document.getElementById(id).classList.add('ativo');
+  }
+
+  function mudarImagem(el) {
+    const imagemPrincipal = document.getElementById("imagemPrincipal");
+    imagemPrincipal.src = el.src.replace("150", "600x400");
+  }
+
+    function mostrarConteudo(id, linkClicado) {
+    // Previne o comportamento padrão do link
+    event.preventDefault();
+
+    // Esconde todas as divs de conteúdo
+    const divs = document.querySelectorAll('.conteudo');
+    divs.forEach(div => div.classList.remove('ativo'));
+
+    // Remove classe 'ativo-btn' de todos os links
+    const links = document.querySelectorAll('.botoes a');
+    links.forEach(link => link.classList.remove('ativo-btn'));
+
+    // Mostra a div correspondente e ativa o link
+    document.getElementById(id).classList.add('ativo');
+    linkClicado.classList.add('ativo-btn');
+  }
+
+
+
+
+
+// Troca de conteúdo (div1, div2, div3)
+function mostrarConteudo(id, el) {
+  document.querySelectorAll('.conteudo').forEach(div => {
+    div.classList.remove('ativo');
+  });
+  document.getElementById(id).classList.add('ativo');
+
+  document.querySelectorAll('.botoes a').forEach(a => {
+    a.classList.remove('ativo-btn');
+  });
+  el.classList.add('ativo-btn');
+}
+
+// Lógica das galerias (3 divs com carrossel de imagens)
+document.querySelectorAll('.conteudo-destaque').forEach((conteudo, index) => {
+  const imgPrincipal = conteudo.querySelector('#img-principal');
+  const thumbs = conteudo.querySelectorAll('.btn-img-g a img');
+  let atual = 0;
+
+  function atualizarAtivo(i) {
+    thumbs.forEach(img => img.classList.remove('ativo'));
+    thumbs[i].classList.add('ativo');
+    imgPrincipal.src = thumbs[i].src;
+    atual = i;
+  }
+
+  thumbs.forEach((thumb, i) => {
+    thumb.addEventListener('click', () => {
+      atualizarAtivo(i);
+    });
+  });
+
+  atualizarAtivo(atual);
+
+  setInterval(() => {
+    if (!conteudo.closest('.conteudo').classList.contains('ativo')) return;
+    atual = (atual + 1) % thumbs.length;
+    atualizarAtivo(atual);
+  }, 5000);
+});
